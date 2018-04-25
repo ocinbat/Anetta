@@ -7,7 +7,13 @@ Anetta is a tool for extending Microsoft.Extensions.DependencyInjection DI capab
 ## Installation
 
 ```shell
-Install-Package Anetta
+PM> Install-Package Anetta
+```
+
+or
+
+```shell
+> dotnet add package Anetta
 ```
 
 ## Usage
