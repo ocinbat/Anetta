@@ -17,6 +17,8 @@ namespace ConsoleApp
             SampleServiceWithInterface sampleServiceWithInterface = serviceProvider.GetService<SampleServiceWithInterface>();
             sampleServiceWithAttribute.Execute();
             sampleServiceWithInterface.Execute();
+
+            Console.ReadLine();
         }
     }
 }
