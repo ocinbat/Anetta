@@ -2,7 +2,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/gtme5qrorat8r37w?svg=true)](https://ci.appveyor.com/project/ocinbat/anetta)
 
-Anetta is a tool for extending Microsoft.Extensions.DependencyInjection DI capabilities.
+Anetta is a tool for extending Microsoft.Extensions.DependencyInjection DI capabilities with annotations.
 
 ## Installation
 
