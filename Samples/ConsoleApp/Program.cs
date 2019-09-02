@@ -11,12 +11,12 @@ namespace ConsoleApp
         {
             IServiceCollection services = new ServiceCollection();
 
-            IServiceProvider serviceProvider = services.BuildAnettaServiceProvider();
+            IServiceProvider serviceProvider = services
+                .AddAnnotations()
+                .BuildServiceProvider();
 
             SampleServiceWithAttribute sampleServiceWithAttribute = serviceProvider.GetService<SampleServiceWithAttribute>();
-            SampleServiceWithInterface sampleServiceWithInterface = serviceProvider.GetService<SampleServiceWithInterface>();
             sampleServiceWithAttribute.Execute();
-            sampleServiceWithInterface.Execute();
 
             Console.ReadLine();
         }

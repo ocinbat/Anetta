@@ -18,16 +18,28 @@ or
 
 ## Usage
 
-In your ConfigureServices method return IServiceProvider built by Anetta.
+In your ConfigureServices method use AddAnnotations method provided by Anetta.Extensions namespace.
 
 ```csharp
 using Anetta.Extensions;
 
 public IServiceProvider ConfigureServices(IServiceCollection services)
 {
-    services.AddMvc();
+    services.AddAnnotations();
 
-    return services.BuildAnettaServiceProvider();
+    /// other service registrations
+}
+```
+
+Now you can mark your classes with 3 different lifetime attributes: Singleton, Scoped, Transient.
+
+```csharp
+using Anetta.Attributes;
+
+[Singleton]
+public class SomeClass(IServiceCollection services)
+{
+    /// other class behaviour
 }
 ```
 

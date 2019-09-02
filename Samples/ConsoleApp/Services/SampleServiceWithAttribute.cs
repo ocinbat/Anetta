@@ -1,14 +1,12 @@
 ﻿using System;
 using Anetta.Attributes;
-using ConsoleApp.Interceptors;
 
 namespace ConsoleApp.Services
 {
-    [Transient]
+    [Singleton]
     public class SampleServiceWithAttribute
     {
-        [LogExecutionTime]
-        public virtual void Execute()
+        public void Execute()
         {
             Console.WriteLine("SampleServiceWithAttribute is executed.");
         }

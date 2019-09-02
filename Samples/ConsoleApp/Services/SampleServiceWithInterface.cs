@@ -1,12 +1,11 @@
 ﻿using System;
-using Anetta.Abstractions;
-using ConsoleApp.Interceptors;
+using Anetta.Attributes;
 
 namespace ConsoleApp.Services
 {
-    public class SampleServiceWithInterface : ISingleton
+    [Scoped]
+    public class SampleServiceWithInterface
     {
-        [LogExecutionTime]
         public void Execute()
         {
             Console.WriteLine("SampleServiceWithInterface is executed.");
