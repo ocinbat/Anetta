@@ -9,8 +9,4 @@
     <ProjectReference Include="..\..\Anetta\Anetta.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interceptors\" />
-  </ItemGroup>
-
 </Project>

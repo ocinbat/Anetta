@@ -11,9 +11,9 @@ namespace ConsoleApp
         {
             IServiceCollection services = new ServiceCollection();
 
-            IServiceProvider serviceProvider = services
-                .AddAnnotations()
-                .BuildServiceProvider();
+            services.AddAnnotations();
+
+            IServiceProvider serviceProvider = services.BuildServiceProvider();
 
             SampleServiceWithAttribute sampleServiceWithAttribute = serviceProvider.GetService<SampleServiceWithAttribute>();
             sampleServiceWithAttribute.Execute();

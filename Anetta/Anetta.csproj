@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <PackageId>Anetta</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>Ömer Cinbat</Authors>
     <Description>Anetta is a tool for extending Microsoft.Extensions.DependencyInjection DI capabilities with annotations.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
