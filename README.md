@@ -37,7 +37,7 @@ Now you can mark your classes with 3 different lifetime attributes: Singleton, S
 using Anetta.Attributes;
 
 [Singleton]
-public class SomeClass(IServiceCollection services)
+public class SomeClass
 {
     /// other class behaviour
 }
