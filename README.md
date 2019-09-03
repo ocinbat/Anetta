@@ -16,9 +16,9 @@ or
 > dotnet add package Anetta
 ```
 
-## Usage
+## Annotations Example
 
-In your ConfigureServices method use AddAnnotations method provided by Anetta.Extensions namespace.
+In your ```ConfigureServices``` method use ```AddAnnotations``` method provided by Anetta.Extensions namespace.
 
 ```csharp
 using Anetta.Extensions;
@@ -31,7 +31,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 }
 ```
 
-Now you can mark your classes with 3 different lifetime attributes: Singleton, Scoped, Transient.
+Now you can mark your classes with 3 different lifetime attributes: ```Singleton, Scoped, Transient```.
 
 ```csharp
 using Anetta.Attributes;
@@ -40,6 +40,39 @@ using Anetta.Attributes;
 public class SomeClass
 {
     /// other class behaviour
+}
+```
+
+## ServiceConfigurator Example
+
+You can extract logic from ```ConfigureServices``` to seperate classes by using ```IServiceConfigurator``` interface.
+
+Create a class that implements ```IServiceConfigurator``` interface.
+
+```csharp
+using Anetta.ServiceConfiguration;
+
+public class SampleServiceWithConfiguratorConfigurator : IServiceConfigurator
+{
+    public void Configure(IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddSingleton<SampleServiceWithConfigurator>();
+    }
+}
+```
+
+and in your ```ConfigureServices``` method use ```AddServiceConfigurators``` method provided by ```Anetta.ServiceConfiguration``` namespace.
+
+```csharp
+using Anetta.ServiceConfiguration;
+
+public IConfiguration Configuration { get; }
+
+public IServiceProvider ConfigureServices(IServiceCollection services)
+{
+    services.AddServiceConfigurators(Configuration);
+
+    /// other service registrations
 }
 ```
 
