@@ -1,4 +1,5 @@
 ﻿using System;
+using Anetta.Configuration;
 using Anetta.Extensions;
 using Anetta.ServiceConfiguration;
 using ConsoleApp.Services;
@@ -18,6 +19,7 @@ namespace ConsoleApp
             IServiceCollection services = new ServiceCollection();
 
             services.AddAnnotations();
+            services.AddConfigurations(configuration);
             services.AddServiceConfigurators(configuration);
 
             IServiceProvider serviceProvider = services.BuildServiceProvider();
